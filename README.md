@@ -11,4 +11,5 @@
 
 | Name      | Link |
 | :---        |    :----:   | 
-| Code Challenge (array-reverse) : Class 01    | [array-reverse](challenges/array-reverse/README.md)      |
+| Code Challenge (array-reverse) : Class 01    | [array-reverse](challenge/array-reverse/README.md)      |
+| Code Challenge (array-insert-shift) : Class 01    | [array-insert-shift](challenge/array-insert-shift/README.md)      |
