@@ -5,7 +5,9 @@
 
 ## Whiteboard Process
 
-![array-insert-shift](array-insert-shift.png)
+![array-insert-shift](rev0.jpeg)
+
+![array-insert-shift](rev1.jpeg)
 
 
 
