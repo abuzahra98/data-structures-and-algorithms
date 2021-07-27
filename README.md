@@ -12,4 +12,5 @@
 | Name      | Link |
 | :---        |    :----:   | 
 | Code Challenge (array-reverse) : Class 01    | [array-reverse](challenge/array-reverse/README.md)      |
-| Code Challenge (array-insert-shift) : Class 01    | [array-insert-shift](challenge/array-insert-shift/README.md)      |
+| Code Challenge (array-insert-shift) : Class 02    | [array-insert-shift](challenge/array-insert-shift/README.md)      |
+| Code Challenge (array-binary-search) : Class 03    | [array-binary-search](challenge/array-binary-search/README.md)      |
