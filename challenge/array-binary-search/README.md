@@ -5,6 +5,6 @@
 
 ## Whiteboard Process
 
-![array-insert-shift](BinarySearch.png)
+![array-insert-shift](BinarySearch1.png)
 
 
