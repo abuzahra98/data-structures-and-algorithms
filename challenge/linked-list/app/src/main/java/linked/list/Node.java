@@ -1,8 +1,8 @@
 package linked.list;
 
 public class Node {
-     String value;
-     Node next;
+    String value;
+    Node next;
     Node(String value)
     {
         this.value=value;

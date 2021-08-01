@@ -5,7 +5,10 @@ package linked.list;
 
 public class App {
 
+
+
     public static void main(String[] args) {
+
         LinkedList list = new LinkedList();
         list.insert("a");
         list.insert("b");
