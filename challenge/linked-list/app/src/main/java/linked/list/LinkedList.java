@@ -1,7 +1,7 @@
 package linked.list;
 
 public class LinkedList {
-     Node head;
+    Node head;
     LinkedList()
     {
         this.head=null;
