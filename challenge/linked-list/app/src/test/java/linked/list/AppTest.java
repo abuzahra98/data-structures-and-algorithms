@@ -7,8 +7,44 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+
+    @Test
+    public void appendTest(){
+        LinkedList list = new LinkedList();
+        list.insert("a");
+        list.insert("b");
+        list.insert("c");
+        list.append("d");
+        String expected = "{ c } -> { b } -> { a } -> { d } -> NULL";
+        String actual = list.toString();
+        assertEquals(expected, actual);
     }
+
+
+
+    @Test
+    public void insertBeforeTest(){
+        LinkedList list = new LinkedList();
+        list.insert("l");
+        list.insert("e");
+        list.insert("q");
+        list.insertBefore("e", "b");
+        String expected = "{ q } -> { b } -> { e } -> { l } -> NULL";
+        String actual = list.toString();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void insertAfterTest(){
+        LinkedList list = new LinkedList();
+        list.insert("g");
+        list.insert("h");
+        list.insert("w");
+        list.insertAfter("h", "i");
+        String expected = "{ w } -> { 2 } -> { i } -> { g } -> NULL";
+        String actual = list.toString();
+        assertEquals(expected, actual);
+    }
+
 }
