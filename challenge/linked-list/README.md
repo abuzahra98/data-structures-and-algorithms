@@ -49,5 +49,12 @@ adds a new node with the given new value immediately before the first node that 
 **insert after()**
 
 adds a new node with the given new value immediately after the first node that has the value specified
+
+**kth from end()**
+
+You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+
+
 ![array-reverse](linkedlist.png)
 
