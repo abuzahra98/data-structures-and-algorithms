@@ -7,8 +7,37 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    @Test
+    public void insertTest() {
+        LinkedList test1 = new LinkedList();
+        test1.insert("dawood");
+        String expected = "dawood";
+        String actual = test1.head.value;
+        assertEquals("insert dawood", expected, actual);
+    }
+    @Test
+    public void includesTest(){
+        LinkedList test3 = new LinkedList();
+        test3.insert("dd");
+        test3.insert("ss");
+        test3.insert("ff");
+        test3.insert("gg");
+        test3.insert("ll");
+        boolean box = test3.includes("dd");
+        assertTrue(box, "should return dd");
 
+    }
 
+    @Test
+    public void stringTest() {
+        LinkedList test5 = new LinkedList();
+        test5.insert("f");
+        test5.insert("y");
+        test5.insert("k");
+        String expected = "{ k } -> { y } -> { f } -> NULL";
+        String actual = test5.toString();
+        assertEquals(expected, actual);
+    }
     @Test
     public void appendTest(){
         LinkedList list = new LinkedList();
