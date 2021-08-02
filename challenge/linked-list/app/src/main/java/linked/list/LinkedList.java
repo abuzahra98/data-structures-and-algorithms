@@ -78,4 +78,31 @@ public class LinkedList {
 
     }
 
+    public Object kthFromEnd (int k){
+        int count = counter();
+        int newCount = (count - k - 1);
+        Node currentNode = this.head;
+        while(currentNode != null){
+            if(newCount < 0){
+                return "Invalid value";
+            }
+            else if (newCount == 0){
+                return currentNode.value;
+            }
+            currentNode = currentNode.next;
+            newCount --;
+        }
+        return currentNode.value;
+    }
+
+    public int counter() {
+        Node currentNode = this.head;
+        int counter = 0;
+        while(currentNode != null){
+            counter++;
+            currentNode = currentNode.next;
+        }
+        return counter;
+    }
+
 }

@@ -76,4 +76,24 @@ class AppTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void kthFromEndTest(){
+        LinkedList list = new LinkedList();
+        list.insert("i");
+        list.insert("l");
+        list.insert("o");
+        list.insert("h");
+
+        // test to see if the (k) is greater than the length of the linked list
+        Object actual = list.kthFromEnd(5);
+        Object expected = "Invalid value";
+        assertEquals(" Tests that k is greater than the value", expected, (String) actual);
+
+        // test to see if the (k) is the same length of the linked list
+        Object actual1 = list.kthFromEnd(4);
+        Object expected1 = "Invalid value";
+        assertEquals(" Tests that k and value are the same length", expected1, (String) actual1);
+
+    }
+
 }
