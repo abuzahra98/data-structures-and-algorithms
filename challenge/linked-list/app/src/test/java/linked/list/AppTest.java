@@ -13,7 +13,7 @@ class AppTest {
         test1.insert("dawood");
         String expected = "dawood";
         String actual = test1.head.value;
-        assertEquals("insert dawood", expected, actual);
+        assertEquals( expected, actual);
     }
     @Test
     public void includesTest(){
@@ -38,8 +38,12 @@ class AppTest {
         String actual = test5.toString();
         assertEquals(expected, actual);
     }
+
+
     @Test
-    public void appendTest(){
+    public void appendTestOneNode(){
+        // 1- Can successfully add a node to the end of the linked list
+
         LinkedList list = new LinkedList();
         list.insert("a");
         list.insert("b");
@@ -50,10 +54,22 @@ class AppTest {
         assertEquals(expected, actual);
     }
 
-
+    @Test
+    public void appendTestMultipleNode() {
+        // 2-Can successfully add multiple nodes to the end of a linked list
+        LinkedList list = new LinkedList();
+        list.insert("a");
+        list.insert("b");
+        list.insert("c");
+        list.append("d");
+        String expected = "{ c } -> { b } -> { a } -> { d } -> NULL";
+        String actual = list.toString();
+        assertEquals(expected, actual);
+    }
 
     @Test
-    public void insertBeforeTest(){
+    public void insertBeforeTestInMiddle(){
+        //3-Can successfully insert a node before a node located i the middle of a linked list
         LinkedList list = new LinkedList();
         list.insert("l");
         list.insert("e");
@@ -64,17 +80,51 @@ class AppTest {
         assertEquals(expected, actual);
     }
 
+
     @Test
-    public void insertAfterTest(){
+    public void insertBeforeTestAtFirst(){
+        //4- Can successfully insert a node before the first node of a linked list
         LinkedList list = new LinkedList();
         list.insert("g");
         list.insert("h");
         list.insert("w");
         list.insertAfter("h", "i");
-        String expected = "{ w } -> { 2 } -> { i } -> { g } -> NULL";
+        String expected = "{ w } -> { h } -> { i } -> { g } -> NULL";
         String actual = list.toString();
         assertEquals(expected, actual);
     }
+
+
+
+
+
+    @Test
+    public void insertAfterTestInMiddle(){
+        // 5-Can successfully insert after a node in the middle of the linked list
+        LinkedList list = new LinkedList();
+        list.insert("g");
+        list.insert("h");
+        list.insert("w");
+        list.insertAfter("h", "i");
+        String expected = "{ w } -> { h } -> { i } -> { g } -> NULL";
+        String actual = list.toString();
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void insertAfterTesAtFirst(){
+        // 6-Can successfully insert a node after the last node of the linked list
+        LinkedList list = new LinkedList();
+        list.insert("g");
+        list.insert("h");
+        list.insert("w");
+        list.insertAfter("w", "i");
+        String expected = "{ w } -> { i } -> { h } -> { g } -> NULL";
+        String actual = list.toString();
+        assertEquals(expected, actual);
+    }
+
 
     @Test
     public void kthFromEndTest(){
@@ -84,16 +134,39 @@ class AppTest {
         list.insert("o");
         list.insert("h");
 
-        // test to see if the (k) is greater than the length of the linked list
+        //1. test to see if the (k) is greater than the length of the linked list
         Object actual = list.kthFromEnd(5);
         Object expected = "Invalid value";
-        assertEquals(" Tests that k is greater than the value", expected, (String) actual);
+        assertEquals( expected, (String) actual);
 
-        // test to see if the (k) is the same length of the linked list
+        //2. test to see if the (k) is the same length of the linked list
         Object actual1 = list.kthFromEnd(4);
         Object expected1 = "Invalid value";
-        assertEquals(" Tests that k and value are the same length", expected1, (String) actual1);
+        assertEquals( expected1, (String) actual1);
+
+       // 3.Where k is not a positive integer
+        Object actual2 = list.kthFromEnd(-4);
+        Object expected2 = "Invalid value";
+        assertEquals( expected2, (String) actual2);
+
+       // 5.“Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+        Object actual3 = list.kthFromEnd(2);
+        Object expected3 = "o";
+        assertEquals(expected3, (String) actual3);
+
 
     }
+    @Test
+    public void kthFromEndTest2() {
+        LinkedList list = new LinkedList();
+        list.insert("i");
 
+
+
+        //4.Where the linked list is of a size 1
+        Object actual3 = list.kthFromEnd(0);
+        Object expected3 = "i";
+        assertEquals(expected3, (String) actual3);
+
+    }
 }

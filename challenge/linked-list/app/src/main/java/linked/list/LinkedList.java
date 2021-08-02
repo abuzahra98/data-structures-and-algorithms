@@ -80,6 +80,10 @@ public class LinkedList {
 
     public Object kthFromEnd (int k){
         int count = counter();
+        if (k<0)
+        {
+            return "Invalid value";
+        }
         int newCount = (count - k - 1);
         Node currentNode = this.head;
         while(currentNode != null){

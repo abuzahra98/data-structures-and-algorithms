@@ -8,18 +8,18 @@ public class App {
 
 
     public static void main(String[] args) {
-
-        LinkedList list = new LinkedList();
-        list.insert("a");
-        list.insert("b");
-        list.insert("c");
-        list.insert("d");
-        list.insert("e");
-        list.insert("f");
-        System.out.println(list.head.value);
-        System.out.println(list.includes("a"));
-        System.out.println(list.includes("s"));
-        System.out.println(list.toString());
+//
+//        LinkedList list = new LinkedList();
+//        list.insert("a");
+//        list.insert("b");
+//        list.insert("c");
+//        list.insert("d");
+//        list.insert("e");
+//        list.insert("f");
+//        System.out.println(list.head.value);
+//        System.out.println(list.includes("a"));
+//        System.out.println(list.includes("s"));
+//        System.out.println(list.toString());
 
     }
 }
