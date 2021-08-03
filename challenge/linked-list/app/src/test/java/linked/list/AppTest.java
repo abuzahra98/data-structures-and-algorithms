@@ -169,4 +169,26 @@ class AppTest {
         assertEquals(expected3, (String) actual3);
 
     }
+
+    @Test
+    public void TestZipList(){
+        LinkedList LinkedListsTest = new LinkedList();
+        LinkedListsTest.insert("a");
+        LinkedListsTest.insert("c");
+        LinkedListsTest.insert("z");
+        LinkedListsTest.insert("l");
+
+        LinkedList LinkedListsTest2 = new LinkedList();
+        LinkedListsTest2.insert("d");
+        LinkedListsTest2.insert("f");
+        LinkedListsTest2.insert("x");
+        LinkedListsTest2.insert("a");
+
+        LinkedList result = LinkedList.zipList(LinkedListsTest,LinkedListsTest2);
+        String x = "HEAD l -> a -> z -> x -> c -> f -> a -> d -> NULL";
+        System.out.println(result);
+        assertEquals(x, result.toString());
+
+
+    }
 }
