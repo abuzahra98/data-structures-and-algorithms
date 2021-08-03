@@ -109,4 +109,48 @@ public class LinkedList {
         return counter;
     }
 
+    public static LinkedList zipList(LinkedList one, LinkedList two){
+        if(one == null)
+            return two;
+        if(two == null){
+            return one;
+        }
+        Node current1 = one.head;
+        Node current2 = two.head;
+        Node tempVar;
+        while (current1 != null){
+
+            tempVar = current1.next;
+            current1.next = current2;
+            current1.next.next = tempVar;
+            current1.next = current1.next.next;
+            current2 = current2.next;
+
+
+        }
+        return one;
+    }
+    public static class Zipping{
+        public static void main(String[] args){
+            System.out.println("Let's zip");
+        }
+    }
+
+
+
+    public static  LinkedList zip(LinkedList first, LinkedList second){
+        Node node1 = first.head;
+        Node node2 = second.head;
+        while(node1 != null && node2 != null){
+            Node node1Next = node1.next;
+            Node node2Next = node2.next;
+            node1.next = node2;
+            node2.next = node1Next;
+            node1 = node1Next;
+            node2 = node2Next;
+        }
+
+        return first;
+    }
+
 }
