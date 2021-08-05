@@ -11,6 +11,9 @@ Singly linked lists are the simplest type of linked list, Refers to the number o
 Create a Node class to Create a Linked List and write a methods to add the linked list, check of a value is in that list and print the list content as a String.
 throw a custom, semantic error that describes what went wrong in calling the methods. and make a test for every possible cases of linked list.
 
+
+## WhiteBoard
+![Kth End Of Array](./kth1.png)
 ## Approach & Efficiency
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->

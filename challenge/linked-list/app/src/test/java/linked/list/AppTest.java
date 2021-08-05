@@ -161,8 +161,6 @@ class AppTest {
         LinkedList list = new LinkedList();
         list.insert("i");
 
-
-
         //4.Where the linked list is of a size 1
         Object actual3 = list.kthFromEnd(0);
         Object expected3 = "i";
@@ -185,8 +183,8 @@ class AppTest {
         LinkedListsTest2.insert("a");
 
         LinkedList result = LinkedList.zipList(LinkedListsTest,LinkedListsTest2);
-        String x = "HEAD l -> a -> z -> x -> c -> f -> a -> d -> NULL";
-        System.out.println(result);
+        String x = "{ l } -> { a } -> { z } -> { x } -> { c } -> { f } -> { a } -> { d } -> NULL";
+
         assertEquals(x, result.toString());
 
 

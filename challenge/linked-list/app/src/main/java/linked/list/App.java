@@ -3,6 +3,9 @@
  */
 package linked.list;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static linked.list.LinkedList.zipList;
 
 public class App {
@@ -19,6 +22,20 @@ public class App {
         list.insert("e");
         list.insert("f");
         System.out.println(list.toString());
+//        List<String> list3 = new ArrayList<>();
+//        Node current = list.head;
+//        while (current!= null)
+//        {
+//         list3.add(current.value);
+//         current=current.next;
+//        }
+//        list.head=null;
+//            for(int i=0;i<list3.size();i++)
+//        {
+//         list.insert(list3.get(i));
+//        }
+//        System.out.println(list.toString());
+
         System.out.println(list.includes("a"));
         list.append("s");
         System.out.println(list.toString());
@@ -36,7 +53,11 @@ public class App {
         list2.insert("5");
         list2.insert("6");
 
+
+
         System.out.println(zipList(list,list2));
+
+
 
 
     }
