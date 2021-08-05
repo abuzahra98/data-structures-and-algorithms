@@ -13,7 +13,12 @@ throw a custom, semantic error that describes what went wrong in calling the met
 
 
 ## WhiteBoard
+**Kth**
 ![Kth End Of Array](./kth1.png)
+
+
+**ZIP**
+![Kth End Of Array](./zip.png) 
 ## Approach & Efficiency
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
