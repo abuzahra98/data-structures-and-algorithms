@@ -4,11 +4,67 @@
 package stack.and.queue;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    @Test public void testPeek() {
+        Stack<Object> newStack = new Stack<>();
+        newStack.push(false);
+        newStack.push(false);
+        newStack.push(true);
+        boolean expectedPeek = true;
+        Object actualPeek = newStack.peek();
+        assertEquals(expectedPeek, actualPeek, "Peeking should return the top value: true");
+    }
+    @Test public void testIsEmpty(){
+        Stack<Object> newStack = new Stack<>();
+        newStack.push(false);
+        newStack.push("dog");
+        newStack.push(25);
+        newStack.pop();
+        newStack.pop();
+        newStack.pop();
+        boolean expectedEmpty = true;
+        Object actualEmpty = newStack.isEmpty();
+        assertEquals(expectedEmpty, actualEmpty, "Should return true if empty");
+
+    }
+    @Test public void testExceptionOnEmpty(){
+        Stack<Object> newStack = new Stack<>();
+        newStack.push(false);
+        newStack.push("dog");
+        newStack.push(25);
+        newStack.pop();
+        newStack.pop();
+        newStack.pop();
+        assertThrows(EmptyStackException.class, newStack::pop);
+    }
+
+    @Test public void testCreateQueue(){
+        Queue<Object> newQueue = new Queue<>();
+        newQueue.enqueue(true);
+        newQueue.enqueue("hello");
+        newQueue.enqueue(50);
+        boolean expected = true;
+        Object actual = newQueue.peek();
+        assertEquals(expected, actual, "Should return the first value queued: true");
+    }
+
+
+
+    @Test public void testException(){
+        Queue<Object> newQueue = new Queue<>();
+        newQueue.enqueue(true);
+        newQueue.enqueue("hello");
+        newQueue.enqueue(50);
+        newQueue.dequeue();
+        newQueue.dequeue();
+        newQueue.dequeue();
+        assertThrows(NoSuchElementException.class, newQueue::peek);
     }
 }
