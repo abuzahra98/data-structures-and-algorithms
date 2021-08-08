@@ -57,14 +57,4 @@ class AppTest {
 
 
 
-    @Test public void testException(){
-        Queue<Object> newQueue = new Queue<>();
-        newQueue.enqueue(true);
-        newQueue.enqueue("hello");
-        newQueue.enqueue(50);
-        newQueue.dequeue();
-        newQueue.dequeue();
-        newQueue.dequeue();
-        assertThrows(NoSuchElementException.class, newQueue::peek);
-    }
 }
