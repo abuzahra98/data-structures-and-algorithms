@@ -48,6 +48,14 @@ public class Queue<T> {
     public boolean isEmpty(){
         return this.front == null;
     }
+    @Override
+    public String toString() {
+        return front.toString();
+    }
+
+
+    public void enquque(T dog) {
+    }
 
 
 }

@@ -8,12 +8,22 @@ public class App {
 
     public static void main (String[] args) throws Exception {
 
-        Stack<Integer> stackList = new Stack<>();
-        stackList.push(2);
-        stackList.push(1);
-        stackList.push(8);
-        stackList.push(10);
-        System.out.println("ffffff");
-        System.out.println(stackList.value);
+//        Stack<Integer> stackList = new Stack<>();
+//        stackList.push(2);
+//        stackList.push(1);
+//        stackList.push(8);
+//        stackList.push(10);
+//        System.out.println("ffffff");
+//        System.out.println(stackList.value);
+//        System.out.println();
+        Cat cat1=new Cat("Lolo");
+        Cat cat2 =new Cat("smore");
+        Dog dog=new Dog("rex");
+        AnimalShelter test=new AnimalShelter();
+        test.enqueue(cat1);
+        test.enqueue(cat2);
+        test.enqueue(dog);
+
+        System.out.println(test.dequeue("cat") instanceof Dog);
     }
 }
