@@ -6,9 +6,10 @@ package stack.and.queue;
 import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
-import java.util.NoSuchElementException;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class AppTest {
 
@@ -54,7 +55,19 @@ class AppTest {
         Object actual = newQueue.peek();
         assertEquals(expected, actual, "Should return the first value queued: true");
     }
+@Test public void testHappySenario()
+{
+    Cat cat1=new Cat("Lolo");
+    Cat cat2 =new Cat("smore");
+    Dog dog=new Dog("rex");
+    AnimalShelter test=new AnimalShelter();
+    test.enqueue(cat1);
+    test.enqueue(cat2);
+    test.enqueue(dog);
 
+
+    System.out.println(test.dequeue("cat") instanceof Dog);
+}
 
 
 }

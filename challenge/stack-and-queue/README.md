@@ -22,6 +22,8 @@ This object should be aware of a default empty value assigned to top when the st
 Create a Queue class that has a front property. It creates an empty Queue when instantiated.
 This object should be aware of a default empty value assigned to front when the queue is created.
 
+## White bored
+![AnimalSheltter](animal.png)
 ## Approach & Efficiency
 
 - Space: O(1).
@@ -49,3 +51,21 @@ This object should be aware of a default empty value assigned to front when the 
 - `peek()`: Returns Value of the node located at the top of the queue. Should raise exception when called on empty queue.
 
 - `is empty()`: Returns Boolean indicating whether or not the queue is empty.
+
+
+Create a class called AnimalShelter which holds only dogs and cats.
+
+The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+
+enqueue
+Arguments: animal
+animal can be either a dog or a cat object.
+
+
+dequeue
+Arguments: pref
+pref can be either "dog" or "cat"
+Return: either a dog or a cat, based on preference.
+
+If pref is not "dog" or "cat" then return null.
