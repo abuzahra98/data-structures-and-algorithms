@@ -22,7 +22,9 @@ This object should be aware of a default empty value assigned to top when the st
 Create a Queue class that has a front property. It creates an empty Queue when instantiated.
 This object should be aware of a default empty value assigned to front when the queue is created.
 
-## White bored
+## Whiteboard Process
+
+![stack-queue-pseudo](qu.PNG)
 ![AnimalSheltter](animal.png)
 ## Approach & Efficiency
 
@@ -53,6 +55,7 @@ This object should be aware of a default empty value assigned to front when the 
 - `is empty()`: Returns Boolean indicating whether or not the queue is empty.
 
 
+
 Create a class called AnimalShelter which holds only dogs and cats.
 
 The shelter operates using a first-in, first-out approach.
@@ -69,3 +72,17 @@ pref can be either "dog" or "cat"
 Return: either a dog or a cat, based on preference.
 
 If pref is not "dog" or "cat" then return null.
+
+## Challenge Pseudo Queue
+
+Create a new class called `pseudo queue`.
+this PseudoQueue class will implement our standard queue interface.
+Internally, utilize 2 Stack instances to create and manage the queue.
+
+`enqueue()` : Inserts value into the PseudoQueue, using a first-in, first-out approach.
+
+`dequeue()` : Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+
+
+
