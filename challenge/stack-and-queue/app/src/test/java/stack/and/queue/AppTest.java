@@ -7,9 +7,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
+import static stack.and.queue.App.brackets;
 
 class AppTest {
 
@@ -68,6 +67,39 @@ class AppTest {
 
     System.out.println(test.dequeue("cat") instanceof Dog);
 }
+
+
+    @Test void stackQueueBrackets() {
+
+        // If the String is empty return True -No brackets error-.
+        String testString = "";
+        assertTrue(brackets(testString));
+
+        // If the String has no brackets -No brackets error-.
+        testString = "dawood";
+        assertTrue(brackets(testString));
+
+        // If the brackets is true.
+        testString = "dd ( c )";
+        assertTrue(brackets(testString));
+
+        // If the brackets is false.
+        testString = " ( { d } ] a )";
+        assertFalse(brackets(testString));
+
+        // False Happy path.
+        testString = "[ { ( { } ] )";
+        assertFalse(brackets(testString));
+
+        // True Happy path.
+        testString = "[[({( )})]]";
+        assertTrue(brackets(testString));
+
+        // True Happy path.
+        testString = "[[ Hi ]] ( wow )";
+        assertTrue(brackets(testString));
+
+    }
 
 
 }
