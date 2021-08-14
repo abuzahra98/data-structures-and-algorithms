@@ -26,4 +26,30 @@ public class App {
 
         System.out.println(test.dequeue("cat") instanceof Dog);
     }
+
+    public static boolean brackets(String br) {
+        if (br.isEmpty()) return true;
+
+        Stack<String> kStack = new Stack<>();
+        String[] arrToCheck = br.split("");
+
+        for (String value: arrToCheck) {
+            if ((value.equals("}") || value.equals("]") || value.equals(")")) && kStack.isEmpty()) {
+                return false;
+            }
+            if (value.equals("{") || value.equals("[") || value.equals("(")) {
+                kStack.push(value);
+            } else if (value.equals("}")) {
+                if (kStack.top.value.equals("{")) kStack.pop();
+                else return false;
+            } else if (value.equals(")")) {
+                if (kStack.top.value.equals("(")) kStack.pop();
+                else return false;
+            } else if (value.equals("]")) {
+                if (kStack.top.value.equals("[")) kStack.pop();
+                else return false;
+            }
+        }
+        return kStack.isEmpty();
+    }
 }
