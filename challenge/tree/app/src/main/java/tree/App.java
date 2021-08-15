@@ -10,5 +10,14 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        BinarySearchTree<Integer> firstObj=new BinarySearchTree<>();
+        firstObj.add(44);
+        firstObj.add(23);
+        firstObj.add(12);
+        System.out.println(firstObj.contains(54));
+        System.out.println(firstObj.contains(52));
+        System.out.println(firstObj.contains(33));
+        System.out.println(firstObj.contains(78));
     }
-}
+    }
+
