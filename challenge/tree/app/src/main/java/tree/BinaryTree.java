@@ -44,4 +44,20 @@ public class BinaryTree <t>{
         postOrder.add(rootNode.getNodeValue());
         return postOrder;
     }
+
+    public int maximumValue() {
+        if (root == null) return 0;
+        if (root.left == null || root.right == null)
+
+            return (int) root.value;
+        int max = 0;
+        ArrayList<Integer> maxList = (ArrayList<Integer>) postOrder((Node<t>) root);
+        for (int i = 0; i < maxList.size(); i++) {
+            if (maxList.get(i) >= max) {
+                max = maxList.get(i);
+            }
+        }
+        return max;
+    }
+
 }
