@@ -47,3 +47,7 @@ Space : O(n).
 Time : O(n).
 
 Space : O(n).
+
+## whitebord
+
+![](tree.png)
