@@ -1,54 +1,117 @@
+
+
+
+
+
+
 # Trees
 
-A Tree node is a component which may contain it’s own values, and references to other nodes.
-
-- The root is the node at the beginning of the tree
-- Left - A reference to one child node, in a binary tree
-- Right - A reference to the other child node, in a binary tree
-- Edge - The edge in a tree is the link between a parent and child node
-- Leaf - A leaf is a node that does not have any children
+<!-- Short summary or background information -->
 
 ## Challenge
 
-- **Node** : `Node` class has properties for the value stored in the node, the left child node, and the right child node.
+<!-- Description of the challenge -->
 
-- **Binary Tree class** : `BinaryTree` class Define a method for each of the depth first traversals.
-
-- **Binary Search Tree** : `BinarySearchTree` class is a sub-class of the Binary Tree Class.
-
-**Code raise/throw a custom, semantic error that describes what went wrong in calling the methods.**
-
-## API
-
-**Binary Tree class method :**
-
-- `preOrder()` : prioritize going through the depth (height) of the tree first in order **`root >> left >> right`**.
-
-- `inOrder()`: prioritize going through the depth (height) of the tree first in order **`left >> root >> right`**.
-
-- `postOrder()`: prioritize going through the depth (height) of the tree first in order **`left >> right >> root`** , returns an array of the values, ordered appropriately.
-
-**Binary Search Tree method (BST) :**
-
-- `Add()` : Takes a value and adds a new node with that value in the correct location in the binary search tree.
-
-- `Contains()` : Takes a value and Returns a boolean indicating whether or not the value is in the tree at least once.
+Build all trees classes and methods from scratch
 
 ## Approach & Efficiency
 
-- `Add()`:
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-Time : O(n).
+* Create a Node class that has properties for the `data` stored in the node, the
+  `left` child node, and the `right` child node.
 
-Space : O(n).
+* Create a BinaryTree class ,define a method for each of the depth first traversals
+  called `inOrderTraverse`
+  , `postOrderTraverse`, and
+  `preOrderTraverse` which returns an array of the values, ordered appropriately.
 
-- `Contains()`:
+* Create a BinarySearchTree class define a method named add that accepts a new node, and data with
+  that data in the correct location in the binary search tree, define a method named contains that
+  accepts a data, and returns a boolean indicating whether the data is in the tree at least once.
 
-Time : O(n).
+## API
 
-Space : O(n).
+<!-- Description of each method publicly available in each of your trees -->
 
-## whitebord
+* Class BinaryTree
+    * `getRoot()` to get your root
+    * `setRoot()` to set your root and insert a node inet
+    * `inOrderTraverse()` send your root to get a data sorted left-root-right
+    * `postOrderTraverse()` send your root to get a data sorted root-left-right
+    * `preOrderTraverse()` send your root to get a data sorted left-right-root
+
+* Class BinarySearchTree
+    * `add()` insert in your tree u send just data.
+    * `traverse()` get your root and start for cat in half a tree to insert your data inet
+    * `contains()` to get a `boolean` true or false after search in your tree
+    * `comparison()` reseve a root and data to start search
+
+# Challenge Summary
+
+
+## Approach & Efficiency
+
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+* Big O of O(n)
+
+## Solution
+
+<!-- Show how to run your code, and examples of it in action -->
+
+
+# Challenge Summary
+
+<!-- Description of the challenge -->
+
+## Whiteboard Process
+
 
 ![](tree.png)
 ![](uu.png)
+
+## Approach & Efficiency
+
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+* Big O of O(n^1)
+
+## Solution
+
+<!-- Show how to run your code, and examples of it in action -->
+
+
+# Challenge Summary
+
+<!-- Description of the challenge -->
+
+A binary tree is used to solve the Fizz Buzz issue. Map each value in a tree of integers to a tree
+of strings with the same structure using the reasoning below.
+
+## Whiteboard Process
+
+![](buzz.png)
+
+
+## Approach & Efficiency
+
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+time/space complexity O(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,12 +1,17 @@
 package tree;
 
 public class Node<t> {
+    private t data;
     public t value;
     public Node<t> left;
     public Node<t> right;
 
     public Node(t value) {
         this.value = value;
+    }
+
+    public Node() {
+
     }
 
     public t getNodeValue() {
@@ -31,4 +36,12 @@ public class Node<t> {
 
     public void setRight(Node<t> right) {
         this.right = right;
-    }}
+    }
+    public t getData() {
+        return data;
+    }
+
+    public void setData(t data) {
+        this.data = data;
+    }
+}

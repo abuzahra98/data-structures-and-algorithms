@@ -10,5 +10,48 @@ class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
     }
+    @Test void testSingleRoot(){
+        BinarySearchTree<Integer> firstObj=new BinarySearchTree<>();
+        firstObj.root=new Node(4);
+        assertEquals(4,firstObj.root.value);
+    }
+
+    @Test void testadd(){
+        BinarySearchTree<Integer> firstObj=new BinarySearchTree<>();
+        firstObj.add(11);
+        firstObj.add(15);
+        firstObj.add(20);
+        assertEquals(true,firstObj.contains(11));
+        assertEquals(true,firstObj.contains(20));
+        assertEquals(true,firstObj.contains(15));
+        assertEquals(false,firstObj.contains(22));
+
+    }
+    @Test void maximumValue(){
+        BinaryTree<Integer> secObj=new BinaryTree<>();
+        secObj.root = new Node(2);
+        secObj.root.left = new Node(7);
+        secObj.root.right = new Node(5);
+        secObj.root.left.right = new Node(6);
+        secObj.root.left.right.left = new Node(1);
+        secObj.root.left.right.right = new Node(11);
+        secObj.root.right.right = new Node(9);
+        secObj.root.right.right.left = new Node(4);
+        assertEquals(11,secObj.maximumValue(secObj.root));
+    }
+    @Test void breadthFirst() throws Exception {
+        BinarySearchTree<Integer>newTree =new BinarySearchTree<>();
+        newTree.add(1);
+        newTree.add(2);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(5);
+        String res="[1, 2, 3, 4, 5]";
+        assertEquals(res,newTree.breadthFirst(newTree));
+
+    }
+
+    
 }
