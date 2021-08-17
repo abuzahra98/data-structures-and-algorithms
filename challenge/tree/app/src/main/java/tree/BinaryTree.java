@@ -48,13 +48,13 @@ public class BinaryTree <t>{
         return postOrder;
     }
 
-    public int maximumValue() {
-        if (root == null) return 0;
-        if (root.left == null || root.right == null)
+    public int maximumValue(Node<Integer> root) {
+        if (this.root == null) return 0;
+        if (this.root.left == null || this.root.right == null)
 
-            return (int) root.value;
+            return (int) this.root.value;
         int max = 0;
-        ArrayList<Integer> maxList = (ArrayList<Integer>) postOrder((Node<t>) root);
+        ArrayList<Integer> maxList = (ArrayList<Integer>) postOrder((Node<t>) this.root);
         for (int i = 0; i < maxList.size(); i++) {
             if (maxList.get(i) >= max) {
                 max = maxList.get(i);
@@ -62,7 +62,12 @@ public class BinaryTree <t>{
         }
         return max;
     }
-    public ArrayList breadthFirst() throws Exception {
+
+    private Object postOrder(Node<t> root) {
+        return null;
+    }
+
+    public ArrayList breadthFirst(BinarySearchTree<Integer> newTree) throws Exception {
         ArrayList<Object> resultList = new ArrayList<>();
         resultList.clear();
         Queue<Node> queue = new LinkedList<>();
@@ -80,7 +85,49 @@ public class BinaryTree <t>{
         }
         return resultList;
     }
+    public Node<t> getRoot() {
+        if (root == null) {
+            return null;
+        }
+        return root;
+    }
 
+    public void setRoot(Node<t> root) {
+        this.root = root;
+    }
+    public BinaryTree<String> fizzBuzz(BinaryTree<Integer> tree) {
+
+        BinaryTree<String> newTree = new BinaryTree<>();
+
+        if (tree.getRoot().getData() != null) {
+            traverseFizzBuzzTree(tree.getRoot(), newTree.getRoot());
+        }
+
+        return newTree;
+    }
+
+    private void traverseFizzBuzzTree(Node<Integer> root, Node<String> newRoot) {
+
+        if (root.getData() % 15 == 0) {
+            newRoot.setData("FizzBuzz");
+        } else if (root.getData() % 5 == 0) {
+            newRoot.setData("Buzz");
+        } else if (root.getData() % 3 == 0) {
+            newRoot.setData("Fizz");
+        } else {
+            newRoot.setData(root.getData().toString());
+        }
+
+        if (root.getLeft() != null) {
+            newRoot.setLeft(new Node<>());
+            traverseFizzBuzzTree(root.getLeft(), newRoot.getLeft());
+        }
+
+        if (root.getRight() != null) {
+            newRoot.setRight(new Node<>());
+            traverseFizzBuzzTree(root.getRight(), newRoot.getRight());
+        }
+    }
 
 }
 
