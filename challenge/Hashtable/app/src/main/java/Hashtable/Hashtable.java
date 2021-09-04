@@ -30,23 +30,22 @@ public class Hashtable {
         for(int i = 0; i < valueAsAString.length(); i ++) {
             char character = valueAsAString.charAt(i);
             int num = character;
-            System.out.println(num);
             hash += num;
             hash = hash * 27 ;
-            System.out.println(hash);
         }
         hash = hash % bucket.length;
-        System.out.println("hash = " + hash);
         return hash;
 
     }
     public boolean contains(Object key){
         int index = hash(key);
-        System.out.println("index = " + index);
         if(bucket[index].isEmpty()) return false;
         return true;
     }
 
 
-    }
+
+
+   
+}
 
