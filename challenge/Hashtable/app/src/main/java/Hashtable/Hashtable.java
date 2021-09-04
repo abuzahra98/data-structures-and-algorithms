@@ -34,10 +34,8 @@ public class Hashtable {
             hash += num;
             hash = hash * 27 ;
             System.out.println(hash);
-            hash = hash % 100001;
         }
         hash = hash % bucket.length;
-        System.out.println("hash = " + hash);
         return hash;
 
     }
@@ -48,13 +46,5 @@ public class Hashtable {
         return true;
     }
 
-    public static class StorageObject{
-        Object key;
-        Object value;
-
-        public StorageObject(Object key, Object value){
-            this.key = key;
-            this.value = value;
-        }
-    }
+   
 }
