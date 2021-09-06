@@ -11,7 +11,7 @@ public class RepeatedWord {
 
         int counter = 1;
         String firstRepeatedWord = null;
-
+ 
         for(String word: words){
             word = word.toLowerCase();
             if(hashtable.get(word) != null){
