@@ -4,11 +4,41 @@
 package graph;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test
+    public void breadthFirstGraphTest(){
+        Graph graph = new Graph();
+        Graph.Vertex phone = graph.addVertex("Phone");
+        Graph.Vertex keys = graph.addVertex("Keys");
+        Graph.Vertex wallet = graph.addVertex("Wallet");
+        Graph.Vertex computer = graph.addVertex("Computer");
+        Graph.Vertex passport = graph.addVertex("Passport");
+        Graph.Vertex glasses = graph.addVertex("Glasses");
+
+        BreadthFirst breadthFirst = new BreadthFirst();
+
+        assertEquals(1, breadthFirst.breathFirstTraversal(phone).size());
+        assertEquals(1, breadthFirst.breathFirstTraversal(wallet).size());
+        assertEquals(1, breadthFirst.breathFirstTraversal(keys).size());
+
+        graph.addEdge(passport, phone);
+        graph.addEdge(passport, computer);
+        graph.addEdge(phone, computer);
+        graph.addEdge(phone, wallet);
+        graph.addEdge(wallet, keys);
+        graph.addEdge(wallet, glasses);
+
+
+        System.out.println("breadthFirst = " + breadthFirst.breathFirstTraversal(glasses));
+        assertEquals(6,breadthFirst.breathFirstTraversal(glasses).size());
+        LinkedHashSet<String> expected = new LinkedHashSet<String>(Arrays.asList("Glasses", "Wallet", "Phone", "Keys", "Passport", "Computer"));
+        assertEquals(expected, breadthFirst.breathFirstTraversal(glasses));
+
     }
 }
